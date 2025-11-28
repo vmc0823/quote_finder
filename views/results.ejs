@@ -1,0 +1,60 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+
+    <div class="qf-page">
+        <div class="qf-card card">
+            <div class="card-body p-4">
+
+
+    <h1>Quotes Found</h1>
+
+    <% for (i of quotes) { %>
+
+        <%= i.quote %> <br>
+        -<em>
+            <a href="#" id="<%=i.authorId%>">
+                <%= i.firstName%> <%=i.lastName %>
+            </a>
+        </em>
+        <br><br>
+
+        <% } %>
+
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Button trigger modal DELETE BY 10.5 lab5
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="authorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Author Information</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="authorInfo"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> 
+                 not necessary since we are not using the POST method request, button does not do anything--> 
+            </div>
+            </div>
+        </div>
+        </div>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
+

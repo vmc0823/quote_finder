@@ -1,0 +1,64 @@
+footer {
+    text-align: center;
+    margin-top: 18px;
+    font-size: .95rem;
+    opacity: .9;
+    }
+
+.footer-logo{
+    height: 78px;
+    margin-top: 8px;
+  }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0b1533, #2467b3);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+  }
+
+.qf-page{
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.qf-card{
+  width: 100%;
+  max-width: 700px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+}
+
+.qf-card h1{
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: 8px;
+}
+
+.qf-card form{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.qf-card input[type="text"],
+.qf-card select{
+  padding: 4px 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.15);
+}
+
+.qf-card button{
+  border-radius: 10px;
+}
+

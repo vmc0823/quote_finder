@@ -1,0 +1,60 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+
+ <div class="qf-page">
+  <div class="qf-card card">
+    <div class="card-body p-4">
+   
+
+ <h1> Quote Finder </h1>
+   <form action="/searchByKeyword">
+     Keyword: 
+     <input type="text" name="keyword">
+     <button>Search by Keyword</button>
+   </form>
+   <br>
+   <form action="/searchByAuthor">
+     <select name="authorId">
+       <% for (author of authors) { %>
+        <option value="<%=author.authorId%>">
+            <%=author.firstName%> <%=author.lastName%>
+        </option>
+        <% } %>
+     </select>
+     <button>Search by Author</button>
+     </form>
+    <br>
+
+    <form action="/searchByCategory">
+    Category:
+    <select name="category">
+        <% for (c of categories) { %>
+        <option value="<%= c.category %>">
+            <%= c.category %>
+        </option>
+        <% } %>
+    </select>
+    <button>Search by Category</button>
+    </form>
+
+    <br>
+
+    <form action="/searchByLikes">
+    Likes from:
+    <input type="text" name="minLikes">
+    to:
+    <input type="text" name="maxLikes">
+    <button>Search by Likes</button>
+    </form>
+
+        </div>
+    </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>
+
+</body>
+
+</html>
